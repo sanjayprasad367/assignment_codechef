@@ -80,6 +80,10 @@ p {
 	clip: rect(0, 0, 0, 0);
 	border: 0
 }
+.underline{
+	position: relative;
+	padding-top: 31px;
+}
 .underline:after {
 	content: '';
 	position: absolute;
@@ -87,9 +91,9 @@ p {
 	height: 1px;
 	background: #2f2f2f;
 	display: block;
-	top: 22px;
+	top: 75%;
 	left: 0;
-	transform: rotate(-5deg)
+	transform: rotate(-7deg);
 }
 h2.block-title {
 	font-size: 46px;
@@ -121,6 +125,9 @@ h2.block-title {
 }
 .d-block {
 	display: block
+}
+.d-flex{
+	display: flex;
 }
 .button.btn--orange:hover {
 	background-color: #34404b
@@ -211,12 +218,16 @@ h4.small--heading {
 	max-width: 1350px;
 	margin: 0 auto
 }
+.fluid-container{
+	padding: 0 3%;
+	margin: 0 auto
+}
 .large-12 {
-	max-width: 1200px;
+	max-width: 1326px;
 	margin: 0 auto
 }
 .small-12 {
-	max-width: 944px;
+	max-width: 956px;
 	margin: 0 auto
 }
 .topbar {
@@ -229,10 +240,12 @@ h4.small--heading {
 	width: 50%
 }
 .topbar .left ul {
-	margin-top: 4px
+	margin-top: 11px;
+	margin-bottom: 10px;
+	overflow: hidden;
 }
 .topbar .left ul li {
-	padding-left: 26px;
+	padding-left: 28px;
 	margin-right: 20px;
 	display: block;
 	float: left
@@ -244,14 +257,15 @@ h4.small--heading {
 .topbar .left ul li:nth-of-type(2) {
 	background: url(assets/images/PhoneIco.svg) no-repeat left center;
 	margin-right: 0;
-	padding-left: 18px;
+	padding-left: 24px;
 	background-size: 14px
 }
 .topbar .left ul li a {
 	font-size: 12px;
 	font-weight: 400;
 	color: #34404b;
-	line-height: 14px
+	line-height: 14px;
+	display: block
 }
 .topbar .left ul li a:hover {
 	color: #ff5912
@@ -286,7 +300,8 @@ h4.small--heading {
 .header {
 	background: #fff;
 	overflow: hidden;
-	padding-top: 28px
+	padding-top: 22px;
+	max-height:98px;
 }
 .header .logo {
 	border: 1px solid #cbcbcb;
@@ -308,9 +323,13 @@ h4.small--heading {
 }
 .logo__title h4 {
 	position: relative;
-	margin-left: 24px;
+	margin-left: 30px;
 	display: inline-block;
 	margin-top: 5px
+}
+.logo__title h4 span{
+	font-size: 13px;
+	font-weight: 700
 }
 .logo__title h4:before {
 	content: '';
@@ -336,7 +355,7 @@ h4.small--heading {
 	font-size: 20px;
 	color: #34404b;
 	font-weight: 700;
-	margin-left: 14px;
+	margin-left: 20px;
 	line-height: 22px;
 	position: relative
 }
@@ -352,7 +371,7 @@ h4.small--heading {
 }
 .nav {
 	overflow: hidden;
-	padding: 24px 0 30px 0
+	padding: 32px 0 24px 0
 }
 .nav ul li {
 	margin-right: 36px;
@@ -360,7 +379,7 @@ h4.small--heading {
 	display: block
 }
 .nav ul li:last-child {
-	margin-right: 0
+	margin-right: 7px
 }
 .nav ul li a {
 	color: #34404b;
@@ -375,7 +394,7 @@ h4.small--heading {
 .nav ul li a.nav--active:after,
 .nav ul li a:hover:after {
 	content: '';
-	width: 20px;
+	width: 24px;
 	height: 4px;
 	background: #ff5912;
 	border-radius: 2px;
@@ -398,7 +417,7 @@ h4.small--heading {
 .banner .large-12 {
 	position: relative;
 	height: 100%;
-	padding: 140px 0 117px 0
+	padding: 138px 0 117px 0
 }
 .banner .large-12:after {
 	background: url(assets/images/Chef@2x.png) no-repeat bottom right;
@@ -423,7 +442,7 @@ h4.small--heading {
 	font-weight: 400;
 	letter-spacing: .72px;
 	line-height: 36px;
-	margin-bottom: 44px
+	margin-bottom: 56px
 }
 .registration-info {
 	background-color: #2f2f2f;
@@ -452,7 +471,7 @@ h4.small--heading {
 	background-color: #f4f6f8
 }
 .certification-block .small-12 {
-	padding: 82px 0 52px 0
+	padding: 82px 0 63px 0
 }
 .certification-block p {
 	color: #2f2f2f;
@@ -460,14 +479,14 @@ h4.small--heading {
 	font-weight: 400;
 	letter-spacing: .6px;
 	line-height: 36px;
-	margin-bottom: 20px
+	margin-bottom: 38px
 }
 .certification-block p:last-child {
 	margin-bottom: 0
 }
 .levels {
 	background-color: #fff;
-	padding: 55px 0 91px 0;
+	padding: 67px 0 91px 0;
 	overflow: hidden
 }
 .level-content {
@@ -475,29 +494,31 @@ h4.small--heading {
 }
 .level-tabs {
 	text-align: center;
-	padding-bottom: 50px
+	padding-bottom: 45px;
+	margin: 4px auto 0 auto;
+	max-width: 540px;
 }
 .level-tabs li {
 	display: inline-block;
-	margin-right: 112px
+	margin-right: 113px
 }
 .level-tabs li.level--active a {
 	color: #34404b;
-	font-weight: 700
+	font-weight: 700;
+	font-size: 20px;
 }
 .level-tabs li:last-child {
-	margin-right: 48px
+	margin-right: 0
 }
 .level-tabs li a {
 	color: #ff5912;
 	font-size: 24px;
 	font-weight: 400;
-	letter-spacing: .72px;
 	line-height: 36px;
 	position: relative
 }
 .level-tabs li a:hover {
-	color: #34404b
+	color: #34404b;
 }
 .level-tabs li a:hover:after,
 .level-tabs li.level--active a:after {
@@ -511,25 +532,54 @@ h4.small--heading {
 	bottom: -11px;
 	left: 0
 }
+.level-tabs-content > p{
+	line-height: 36px;
+}
 .level-resource-block {
-	margin-top: 20px;
+	margin-top: 24px;
 	overflow: hidden
+}
+.level-resource-block:nth-of-type(2){
+	margin-top: 0;
 }
 .level-resource-left {
 	width: 30.86%
 }
+.level-resource-block:nth-of-type(2) .level-resource-left h5{
+	margin-top: 80px;
+}
 .level-resource-right {
 	width: 67.93%;
-	padding-left: 100px
+	padding-left: 90px
 }
 .level-resource-block p {
-	margin-bottom: 16px
+	margin-bottom: 28px
+}
+.level-resource-block p a{
+	line-height: 36px;
 }
 .level-price {
 	position: relative;
 	height: 173px;
-	padding: 0 50px;
+	padding: 0 55px;
 	max-width: 534px
+}
+.level-price__block {
+    position: relative;
+    z-index: 9;
+}
+.level-price__block:nth-of-type(1){
+	margin-bottom: 15px
+}
+.level-price__block:nth-of-type(2){
+	margin-bottom: 22px
+}
+.level-price__block:nth-of-type(2) span:first-child{
+	margin-right: 29px;
+}
+.level-price span{
+	font-size: 22px;
+	line-height: 22px;
 }
 .level-price:before {
 	background: url(assets/images/Path1381@2x.png) no-repeat left center;
@@ -545,7 +595,7 @@ h4.small--heading {
 	position: relative;
 	z-index: 1;
 	text-align: left;
-	padding-top: 26px
+	padding-top: 10px
 }
 .level-price table td {
 	color: #2f2f2f;
@@ -582,7 +632,7 @@ h4.small--heading {
 }
 .testimonials {
 	background-color: #f4f6f8;
-	padding: 110px 0 140px 0;
+	padding: 116px 0 140px 0;
 	position: relative;
 	overflow: visible;
 	height: 797px
@@ -594,7 +644,7 @@ h4.small--heading {
 	text-align: center
 }
 .item-block-wrap {
-	margin-top: 64px;
+	margin-top: 80px;
 	transition: all 0s ease 0s;
 	width: 2650px;
 	position: absolute;
@@ -636,14 +686,15 @@ h4.small--heading {
 	max-width: 108px
 }
 .item-block-right {
-	width: 74%;
-	padding: 50px 26px 0 30px
+	width: 73%;
+	padding: 50px 0 0 30px
 }
 .item-block-right p {
 	color: #2f2f2f;
 	text-align: left;
 	position: relative;
-	margin-bottom: 20px
+	margin-bottom: 20px;
+	padding-right: 60px
 }
 .item-block-right p:before {
 	content: '';
@@ -681,7 +732,7 @@ h4.small--heading {
 }
 .ctrl-btn {
 	position: absolute;
-	top: 34%;
+	top: 36%;
 	z-index: 2
 }
 .prev-btn {
@@ -715,12 +766,13 @@ h4.small--heading {
 	margin: 0
 }
 .users__list-wrap {
-	margin-top: 69px;
-	display: flex;
+    display: flex;
 	flex-wrap: wrap;
 	align-content: space-between;
 	flex: 1;
-	justify-content: space-between!important
+	justify-content: space-between!important;
+	max-width: 1006px;
+	margin: 74px auto 0 auto
 }
 .user-list {
 	width: 22.2%;
@@ -734,7 +786,7 @@ h4.small--heading {
 }
 .user-list .item-block-right {
 	width: 100%;
-	padding: 44px 15px 0 37px
+	padding: 44px 15px 0 41px
 }
 .user-list .item-block-name .small--heading:nth-of-type(1) {
 	font-size: 16px;
@@ -757,7 +809,7 @@ h4.small--heading {
 .user-list .item-block-name:after {
 	position: absolute;
 	bottom: 0;
-	width: 144px;
+	width: 145px;
 	height: 1px;
 	background: #4e4d4d;
 	display: block;
@@ -881,10 +933,14 @@ h4.small--heading {
 .footer-payment ul {
 	margin-left: 55px
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
-	.xl-12 {
-		max-width: 100%;
-		padding: 0 4%
+@media screen and (max-width: 1400px) {
+	.banner .large-12:after{
+		right: 0;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.fluid-container {
+		padding: 0 90px 0 105px;
 	}
 }
 @media screen and (max-width: 1300px) {
@@ -969,7 +1025,7 @@ h4.small--heading {
 }
 @media screen and (max-width: 767px) {
 	.topbar {
-		padding: 18px 38px
+		padding: 20px 40px 10px 40px
 	}
 	.topbar .left {
 		width: 100%
@@ -980,13 +1036,74 @@ h4.small--heading {
 	.topbar .left ul li {
 		margin-right: 12px
 	}
+	.topbar .right ul li:nth-of-type(2){
+		width: 80px;
+		margin-right: 2px;
+		height: 24px;
+	}
+	.topbar .right ul li a{
+		display: block  !important;
+		line-height: 21px;
+	}
+	.topbar .right ul li a{
+		font-size: 12px;
+	}
+	.topbar .left ul li:nth-of-type(2){
+		padding-left: 22px;
+	}
+	.header{
+		max-height: initial;
+		padding-top: 16px;
+	}
+	.header .logo{
+		width: 32px;
+		height: 32px;
+		padding: 2px;
+		margin-top: 4px;
+	}
+	.certification-block p{
+		margin-bottom: 13px;
+	}
+	.level-tabs li.level--active a{
+		font-size: 16px;
+	}
+	.logo .logo__img{
+		vertical-align: top
+	}
+	.logo__title h4{
+		margin-left: 20px;
+		margin-top: 0;
+		line-height: 20px;
+	}
+	.logo__title h4 span{
+		font-size: 13px;
+	}
+	.logo__title h3{
+		margin-left: 11px;
+	}
+	.logo__title img{
+		height: 10px;
+	}
+	.logo__title h4:after, .logo__title h4:before{
+		height: 16px;
+		background-size: contain;
+	}
+	.logo__title.left{
+		min-height: 42px;
+	}
+	.logo__title h3:after{
+		bottom: -7px;
+	}
+	.header .logo img{
+		width: 18px;
+	}
 	.large-12,
 	.small-12 {
 		padding-left: 0;
 		padding-right: 0
 	}
 	.topbar .right {
-		margin-top: 12px
+		margin-top: 0
 	}
 	.header .large-12>.left,
 	.header .large-12>.right {
@@ -997,13 +1114,18 @@ h4.small--heading {
 		overflow: hidden
 	}
 	.logo__title h3 {
-		font-size: 15px
+		font-size: 15px;
+		line-height: 10px;
 	}
 	.nav {
-		padding-top: 40px
+		padding-top: 30px
 	}
 	.nav ul li {
-		margin-right: 20px
+		margin-right: 18px
+	}
+	.nav ul li a.nav--active:after, .nav ul li a:hover:after{
+		bottom: -7px;
+		width: 17px;
 	}
 	.banner {
 		height: initial
@@ -1014,7 +1136,7 @@ h4.small--heading {
 	.banner .small-12 h2 {
 		font-size: 31px;
 		line-height: 43px;
-		margin-bottom: 35px
+		margin-bottom: 23px
 	}
 	.banner .small-12 p {
 		font-size: 18px;
@@ -1065,14 +1187,14 @@ h4.small--heading {
 		padding: 0 0 15px 0
 	}
 	.levels {
-		padding: 49px 24px 77px 31px
+		padding: 49px 36px 77px 40px
 	}
 	h2.block-title {
 		font-size: 36px;
 		letter-spacing: -1.37px;
 		line-height: 43px;
 		text-align: left;
-		margin-bottom: 17px
+		margin-bottom: 29px
 	}
 	.level-tabs li {
 		margin-right: 28px
@@ -1085,7 +1207,7 @@ h4.small--heading {
 		text-align: left
 	}
 	.level-tabs {
-		padding-bottom: 35px
+		padding-bottom: 32px
 	}
 	.level-tabs-content>p {
 		font-size: 18px;
@@ -1107,7 +1229,7 @@ h4.small--heading {
 		font-size: 22px;
 		font-weight: 700;
 		color: #696969;
-		letter-spacing: .66px
+		letter-spacing: 0
 	}
 	.level-resource-right {
 		padding-left: 0
@@ -1115,13 +1237,13 @@ h4.small--heading {
 	.level-tabs-content .level-resource-block p {
 		font-size: 20px;
 		line-height: 30px;
-		letter-spacing: .6px;
+		letter-spacing: 0;
 		margin-bottom: 24px
 	}
 	.level-price:before {
 		background: url(assets/images/Path-1.svg) no-repeat top center;
 		width: 382px;
-		height: 285px
+		height: 300px
 	}
 	.level-price table {
 		padding-top: 55px;
@@ -1132,13 +1254,36 @@ h4.small--heading {
 	}
 	.level-price {
 		height: initial;
-		margin-bottom: 70px
+		margin:0 0 70px 0;
+		max-width: 282px;
+	}
+	.level-price__block:nth-of-type(1){
+		padding-top: 70px;
+	}
+	.level-price__block:nth-of-type(2) span, .level-price__block:nth-of-type(3) span{
+		margin-top: 16px;
+	}
+	.level-price__block:nth-of-type(2), .level-price__block:nth-of-type(1){
+		margin-bottom: 0
+	}
+	.level-price__block:nth-of-type(2) span{
+		margin-bottom: 12px;
+	}
+	.level-price__block{
+		margin-bottom: 0
+	}
+	.underline:after{
+		top: 80px;
 	}
 	.level-resource-right .button {
 		margin: 0
 	}
+
 	.testimonials {
 		padding: 58px 0 0 0
+	}
+	.testimonials-top > p{
+		color: #2f2f2f;
 	}
 	.fluid-wrap .testimonials-top {
 		padding: 0 48px 0 38px
@@ -1217,8 +1362,14 @@ h4.small--heading {
 	.item-block-certified .shape.right {
 		float: left!important
 	}
+	.testimonials-controls{
+		position: relative;
+	}
+	.testimonials-top > p{
+		text-align: left
+	}
 	.ctrl-btn {
-		top: 43%;
+		top: 207px;
 		cursor: pointer;
 		width: 19px;
 		height: 38px;
@@ -1251,10 +1402,13 @@ h4.small--heading {
 		top: 12px
 	}
 	.prev-btn {
-		left: 20px
+		left: 18px
 	}
 	.next-btn {
-		right: 20px
+		right: 18px
+	}
+	.users-list-wrap__outer > p{
+		display: none
 	}
 	.users {
 		padding: 44px 34px 48px 34px
@@ -1294,11 +1448,20 @@ h4.small--heading {
 	}
 	.footer-bottom ul {
 		float: none!important;
-		text-align: center;
-		margin-left: 0
+		text-align: left;
+		margin: 0 auto;
+		max-width: 50px;
 	}
-	.footer-bottom .xl-12>.footer-bottom-menu ul {
+	.footer-bottom ul.left.menu-2{
+		max-width: 94px;
+		padding-left: 18px;
+	}
+	.footer-bottom .fluid-container>.footer-bottom-menu ul {
 		padding-bottom: 32px
+	}
+	.footer-bottom ul.right{
+		max-width: initial;
+		text-align: center
 	}
 	.footer-bottom ul li {
 		float: none;
@@ -1317,7 +1480,7 @@ h4.small--heading {
 	.footer-bottom {
 		padding: 31px 0 15px 0
 	}
-	.footer-bottom .xl-12>.footer-bottom-menu ul,
+	.footer-bottom .fluid-container >.footer-bottom-menu ul,
 	.footer-payment h4.left {
 		float: none!important
 	}
@@ -1386,6 +1549,9 @@ h4.small--heading {
 	}
 	.next-btn {
 		right: 10px
+	}
+	.level-price{
+		padding: 0 20px
 	}
 }
 @media screen and (-ms-high-contrast: active),
